@@ -1,0 +1,27 @@
+.benefits {
+  @extend %section;
+}
+
+.benefits-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--buttons-port-color);
+}
+
+.benefits__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.14;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+
+.benefits__text {
+  line-height: 1.71;
+  color: var(--owner-text-color);
+}

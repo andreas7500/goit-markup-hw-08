@@ -1,0 +1,24 @@
+//  utils styles
+@import './utils/veriables';
+@import './utils/visually-hidden';
+@import './utils/flex-card';
+@import './utils/placeholders';
+
+//  base style
+@import './base/base';
+@import './base/reset';
+
+//  components styles
+@import './components/container';
+@import './components/section';
+@import './components/button';
+@import './components/header';
+@import './components/hero';
+@import './components/modal';
+@import './components/benefits';
+@import './components/work';
+@import './components/team';
+@import './components/customers';
+@import './components/footer';
+@import './components/button-block';
+@import './components/grid-porfolio';

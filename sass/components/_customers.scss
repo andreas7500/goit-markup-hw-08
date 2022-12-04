@@ -1,0 +1,34 @@
+.customers {
+  @extend %section;
+}
+.customers__titlle {
+  margin-bottom: 50px;
+  margin-top: 0px;
+  font-size: 36px;
+  line-height: 1.17;
+  color: var(--main-text-color);
+  text-align: center;
+}
+.customers__list {
+  display: flex;
+  gap: 30px;
+}
+.customers__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  color: var(--icon-color);
+  transition: color 250ms var(--cubic);
+}
+.customers__link:hover,
+.customers__link:focus {
+  color: var(--accent-color);
+}
+
+.customers__icon {
+  fill: currentColor;
+}

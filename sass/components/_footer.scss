@@ -1,0 +1,149 @@
+.footer {
+  background: var(--background-footer-color);
+  padding: 60px 0;
+}
+
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo__footer--color {
+  color: var(--background-color);
+}
+
+.address__list {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.address__contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--owner-text-color);
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.address__list .address__item + .address__item {
+  margin-top: 9px;
+}
+
+.address__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--background-color);
+  transition: color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
+.footer__group {
+  margin-right: auto;
+}
+
+.footer__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+.footer__list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__link-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  color: var(--background-color);
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+  }
+}
+
+.footer__icon {
+  fill: currentColor;
+}
+
+.footer-form-group {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-field {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 0;
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  background-color: var(--background-footer-color);
+  color: var(--background-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  &::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer__btn {
+  position: relative;
+  width: 200px;
+  height: 50px;
+
+  padding-left: 28px;
+  padding-right: 62px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &:hover,
+  &:focus {
+    background-color: var(--focus-btn);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.footer-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: 55px;
+  transform: translate(-50%, -50%);
+}
