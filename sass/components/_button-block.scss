@@ -1,8 +1,20 @@
 .port-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-  column-gap: 8px;
+  gap: 8px;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    // justify-content: center;
+  }
+  @media screen and (min-width: 767px) {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
 
 .port-list__btn:first-child {

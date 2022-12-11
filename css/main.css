@@ -44,7 +44,7 @@
           column-gap: 30px;
 }
 
-.customers, .team, .work, .benefits {
+.section-port, .customers, .team, .work, .benefits {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -123,12 +123,12 @@ p {
   }
 }
 
-.customers, .team, .work, .benefits {
+.section-port, .customers, .team, .work, .benefits {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 @media screen and (max-width: 1199px) {
-  .customers, .team, .work, .benefits {
+  .section-port, .customers, .team, .work, .benefits {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -977,6 +977,7 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 60px;
   }
 }
 @media screen and (min-width: 1199px) {
@@ -1102,7 +1103,7 @@ p {
   display: flex;
   text-align: center;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer-form-group {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1130,6 +1131,17 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+@media screen and (min-width: 768px) {
+  .footer-field {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-field {
+    margin-bottom: 0px;
+    width: 358px;
+  }
 }
 .footer-field::-webkit-input-placeholder {
   font-family: "Roboto";
@@ -1197,16 +1209,30 @@ p {
 }
 
 .port-list {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-column-gap: 8px;
-     -moz-column-gap: 8px;
-          column-gap: 8px;
+  gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .port-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .port-list {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .port-list {
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .port-list__btn:first-child {
@@ -1250,6 +1276,23 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .grid-item {
+    -ms-flex-preferred-size: calc((100% - 0px) / 1);
+        flex-basis: calc((100% - 0px) / 1);
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .grid-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1199px) {
+  .grid-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .item-port-icon {
