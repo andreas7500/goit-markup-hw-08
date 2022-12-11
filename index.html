@@ -25,11 +25,9 @@
 
     <header class="header">
       <div class="container container-header">
-        <!-- -----------------------logo--------------------- -->
         <a class="header__logo logo header__logo--color link" href="./index.html"
           ><span class="logo__web">Web</span>Studio
         </a>
-        <!-------------------------navigation ------------------------>
 
         <nav class="nav">
           <ul class="nav__list list">
@@ -42,7 +40,6 @@
             <li class="nav__item"><a class="nav__link link" href="#">Контакти</a></li>
           </ul>
         </nav>
-        <!--------------------------------- contact ------------------>
 
         <ul class="header__contact list">
           <li class="header__item"
@@ -63,6 +60,54 @@
             ></li
           >
         </ul>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-icon" width="40px" height="40px">
+            <use href="./images/icons.svg#menu40px"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg class="menu-icon" width="40px" height="40px">
+              <use href="./images/icons.svg#close40px"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu list">
+            <li class="mobile-menu-item"
+              ><a href="./index.html" class="mobile-menu-link mobile-menu-current link"
+                >Студія</a
+              ></li
+            >
+            <li class="mobile-menu-item"
+              ><a href="./portfolio.html" class="mobile-menu-link link">Портфоліо</a></li
+            >
+            <li class="mobile-menu-item"><a href="#" class="mobile-menu-link link">Контакти</a></li>
+          </ul>
+          <ul class="mobile-contacts list">
+            <li class="mobile-contacts-item"
+              ><a href="" class="mobile-contacts-link-tel link">+38 096 111 11 11</a></li
+            >
+            <li class="mobile-contacts-item"
+              ><a href="" class="mobile-contacts-link-mail link">info@devstudio.com</a></li
+            >
+          </ul>
+          <ul class="mobile-social list">
+            <li class="mobile-social-item"
+              ><a href="" class="mobile-social-link link">Instagram</a></li
+            >
+            <li class="mobile-social-item"
+              ><a href="" class="mobile-social-link link">Twitter</a></li
+            >
+            <li class="mobile-social-item"
+              ><a href="" class="mobile-social-link link">Facebook</a></li
+            >
+            <li class="mobile-social-item"
+              ><a href="" class="mobile-social-link link">LinkedIn</a></li
+            >
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -70,7 +115,7 @@
     <main class="hero">
       <!-- section1 -->
       <section class="hero-section--overlay">
-        <div class="container">
+        <div class="container hero">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
           <button class="hero__btn btn" type="button" data-modal-open>Замовити послугу</button>
         </div>
@@ -168,7 +213,7 @@
         <div class="container">
           <h2 class="visually-hidden">Наші переваги</h2>
 
-          <ul class="benefits__list flex-card list">
+          <ul class="benefits__list list">
             <li class="benefits__item">
               <div class="benefits-cart">
                 <svg class="benefits__icon" width="70px" height="70px">
@@ -202,7 +247,7 @@
                 >Так само консультація з широким активом значною мірою зумовлює.</p
               >
             </li>
-            <li class="benefits__items">
+            <li class="benefits__item">
               <div class="benefits-cart">
                 <svg class="benefits__icon" width="70px" height="70px">
                   <use href="./images/icons.svg#astronaut"></use>
@@ -226,9 +271,12 @@
             <li class="work__item"
               ><img
                 class="work__icon"
-                src="./images/img3.jpg"
+                srcset="./images/work/img1_lg@1x.jpg 1x, ./images/work/img1_lg@2x.jpg 2x"
+                src="./img1_lg@1x.jpg "
                 alt="Інтернет маркетінг"
                 width="370"
+                height="294"
+                loading="lazy"
               />
 
               <p class="work__text">Десктопні додатки</p>
@@ -236,9 +284,12 @@
             <li class="work__item"
               ><img
                 class="work__icon"
-                src="./images/img2.jpg"
+                srcset="./images/work/img2_lg@1x.jpg 1x, ./images/work/img2_lg@2x.jpg 2x"
+                src="./images/img2_lg@1x.jpg"
                 alt="Мобільні застосунки"
                 width="370"
+                height="294"
+                loading="lazy"
               />
 
               <p class="work__text">Мобільні додатки</p>
@@ -246,9 +297,12 @@
             <li class="work__item"
               ><img
                 class="work__icon"
-                src="./images/img1.jpg"
+                srcset="./images/work/img3_lg@1x.jpg 1x, ./images/work/img3_lg@2x.jpg 2x"
+                src="./img3_lg@1x.jpg"
                 alt="Декстопні застосунки"
                 width="370"
+                height="294"
+                loading="lazy"
               />
 
               <p class="work__text">Дизайнерські рішення</p>
@@ -262,9 +316,34 @@
       <section class="team">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
-          <ul class="team__list flex-card list">
+          <ul class="team__list list">
             <li class="team__item">
-              <img class="team__icon" src="./images/foto1.jpg" alt="Менеджер" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img1_@1x_270.jpg, ./images/team/img1_@2x_270.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img1_@1x_354.jpg 1x, ./images/team/img1_@2x_354.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img1_@1x_450.jpg 1x, ./images/team/img1_@2x_450.jpg 2x"
+                />
+
+                <img
+                  class="team__icon-cart"
+                  src="../images/team/img1_@1x_450.jpg"
+                  alt="Менеджер"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__title-small">Ігор Дем'яненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -301,7 +380,30 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__icon" src="./images/foto2.jpg" alt="Розробник" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img2_@1x_270.jpg 1x, ./images/team/img2_@2x_270.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img2_@1x_354.jpg 1x, ./images/team/img2_@2x_354.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img2_@1x_450.jpg 1x, ./images/team/img2_@2x_450.jpg 2x"
+                />
+                <img
+                  class="team__icon"
+                  src="./images/team/img2_@1x_450.jpg"
+                  alt="Розробник"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
 
               <div class="team__card">
                 <h3 class="team__title-small">Ольга Рєпіна</h3>
@@ -339,7 +441,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__icon" src="./images/foto3.jpg" alt="Маркетолог" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img3_@1x_270.jpg 1x, ./images/team/img3_@2x_270.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img3_@1x_354.jpg 1x, ./images/team/img3_@2x_354.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img3_@1x_450.jpg 1x, ./images/team/img3_@2x_450.jpg 2x"
+                />
+
+                <img
+                  class="team__icon"
+                  src="./images/team/img3_@1x_450.jpg"
+                  alt="Маркетолог"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__title-small">Микола Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -376,7 +503,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__icon" src="./images/foto4.jpg" alt="Дизайнер" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img4_@1x_270.jpg 1x, ./images/team/img4_@2x_270.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img4_@1x_354.jpg 1x, ./images/team/img4_@2x_354.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img4_@1x_450.jpg 1x, ./images/team/img4_@2x_450.jpg 2x"
+                />
+
+                <img
+                  class="team__icon"
+                  src="./images/team/img4_@1x_450.jpg"
+                  alt="Дизайнер"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__card">
                 <h3 class="team__title-small">Михайло Єрмаков</h3>
                 <p class="team__text">UI Designer</p>
@@ -422,38 +574,38 @@
         <div class="container">
           <h2 class="customers__titlle">Постійні клієнти</h2>
           <ul class="customers__list list">
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg class="customers__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#logoone"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg class="customers__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#logosecond"></use>
                 </svg> </a
             ></li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg class="customers__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#logotherd"></use>
                 </svg> </a
             ></li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg class="customers__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#logofour"></use>
                 </svg> </a
             ></li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg class="customers__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#logofive"></use>
                 </svg> </a
             ></li>
-            <li>
+            <li class="customers__item">
               <a class="customers__link" href="">
                 <svg class="customers__icon" width="106px" height="60px">
                   <use href="./images/icons.svg#logosix"></use>
@@ -468,12 +620,10 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <!------------- logo_footer---------------- -->
+        <div class="address-conteiner">
           <a class="logo__footer logo logo__footer--color link" href="./index.html">
             <span class="logo__web">Web</span>Studio
           </a>
-          <!---------------- address-------------- -->
 
           <address class="address">
             <ul class="address__list list">
@@ -487,7 +637,6 @@
                   м. Київ, пр-т Лесі Украінки, 26
                 </a>
               </li>
-              <!-- ----------------contact_footer------------------------- -->
 
               <li class="address__item">
                 <a class="address__contact link" href="mailto:info@devstudio.com"
@@ -500,7 +649,6 @@
             </ul>
           </address>
         </div>
-        <!----------------------------icon --------------------------->
 
         <div class="footer__group">
           <p class="footer__text">приєднуйтесь</p>
@@ -535,7 +683,7 @@
             </li>
           </ul>
         </div>
-        <!-- -------------form-footer-button ----------------->
+
         <div class="footer-form">
           <p class="footer__text">Підпишіться на розсилку</p>
           <form class="footer-form-group">
@@ -554,6 +702,15 @@
     </footer>
 
     <!-- skript -->
+
     <script src="./js/modal.js"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

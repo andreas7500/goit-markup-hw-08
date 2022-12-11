@@ -1,3 +1,9 @@
+@media (max-width: 1199px) {
+  .work {
+    display: none;
+  }
+}
+
 .work {
   @extend %section;
 }
@@ -7,12 +13,19 @@
 }
 .work__title,
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
   margin-top: 0px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+
+  @media screen and (min-width: 1199px) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
 }
 
 .work__item {

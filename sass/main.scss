@@ -3,6 +3,7 @@
 @import './utils/visually-hidden';
 @import './utils/flex-card';
 @import './utils/placeholders';
+@import './utils/mixin';
 
 //  base style
 @import './base/base';
@@ -22,3 +23,4 @@
 @import './components/footer';
 @import './components/button-block';
 @import './components/grid-porfolio';
+@import './components/menu';
