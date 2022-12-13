@@ -68,6 +68,9 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 .link {
   text-decoration: none;
@@ -404,14 +407,6 @@ p {
   opacity: 1;
   -webkit-transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
   transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
-}
-@media screen and (max-width: 580px) {
-  .backdrop {
-    top: 0;
-    overflow: scroll;
-    -webkit-transform: translateX(-50);
-            transform: translateX(-50);
-  }
 }
 
 .is-hidden {
