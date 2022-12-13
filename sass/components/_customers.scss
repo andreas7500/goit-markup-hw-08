@@ -9,12 +9,9 @@
   color: var(--main-text-color);
   text-align: center;
 
-  font-size: 28px;
-  @media screen and (min-width: 767px) {
-    .benefits__title {
-      font-size: 36px;
-      margin-bottom: 50px;
-    }
+  @media screen and (min-width: 1199px) {
+    font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 

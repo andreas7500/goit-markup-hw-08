@@ -22,8 +22,6 @@
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
   padding: 40px;
   position: absolute;
   top: 50%;
@@ -34,10 +32,18 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--cubic);
-  // @media screen and (max-width: 580px) {
-  //   top: 0;
-  //   transform: translateX(-50) translateY(0);
-  // }
+  @media screen and (max-width: 1199px) {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-btn {

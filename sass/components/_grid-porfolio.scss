@@ -29,6 +29,12 @@
   display: block;
   transition: box-shadow 250ms var(--cubic);
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   &:hover .portoverlay,
   &:focus .portoverlay {
     transform: translateY(0);
@@ -73,6 +79,9 @@
   padding: 20px 24px;
   border: 1px solid var(--contener-color);
   border-top: none;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-grow: 1;
+  }
 }
 
 .grid-title {

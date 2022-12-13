@@ -1,8 +1,12 @@
 .hero-section--overlay {
-  padding: 200px 0;
+  padding: 118px 0;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin: 0 auto;
+  @media screen and (min-width: 1199px) {
+    padding: 200px 0;
+    height: 600px;
+  }
 
   text-align: center;
   background-repeat: no-repeat;
