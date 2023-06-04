@@ -3,10 +3,6 @@
 }
 
 .benefits__list {
-  // display: flex;
-  // flex-direction: row;
-  // column-gap: 30px;
-
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -35,12 +31,6 @@
     width: calc((100% - 30px * (4 - 1)) / (4));
   }
 }
-
-// .benefits__item {
-//   @media screen and (min-width: 1199px) {
-//     width: calc((100% - 30px * (4 - 1)) / (4));
-//   }
-// }
 
 .benefits__title {
   margin-bottom: 10px;

@@ -750,7 +750,7 @@ p {
 }
 @media screen and (min-width: 1199px) {
   .work__title,
-.team__title {
+  .team__title {
     font-size: 36px;
     line-height: 1.16;
     margin-bottom: 50px;
